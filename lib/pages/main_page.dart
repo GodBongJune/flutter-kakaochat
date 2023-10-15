@@ -35,7 +35,7 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.profile_circled), label: "profile"),
           BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.chat_bubble_2), label: "chat"),
+              icon: Icon(CupertinoIcons.chat_bubble_2_fill), label: "chat"),
           BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.ellipsis), label: "more"),
         ],
