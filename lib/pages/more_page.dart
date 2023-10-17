@@ -1,12 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:kakao_app/models/tab.dart';
 
 class MorePage extends StatelessWidget {
   const MorePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("more"),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text("더보기"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 30),
+        child: GridView.count(
+          crossAxisCount: 4,
+          children: List.generate(
+            tabs.length,
+            (index) => Column(
+              children: [
+                Icon(tabs[index].icon),
+                SizedBox(height: 5),
+                Text(tabs[index].text)
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
